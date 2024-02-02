@@ -1,37 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<h1>Lista Film: </h1>
+<ul>
+    <li <?php foreach($Movies as $film){
+        $film->printMovie();
+    } 
+    ?>>    
+    </li>
+</ul>
+
 <?php
+include("./Models/Genre.php");
+include("./Models/Movie.php");
+include("./db.php");
 
-class Genre{
-    public $genre;
-    
-    public function __construct($_genre){
-        $this->genre = $_genre;   
-    }
-}
 
-class Movie{
-    public $titolo;
-    public $dataUscita;
-    public $genres = [];
-
-    function __construct($_titolo, $_datauscita, $_genres){
-        
-        $this->titolo = $_titolo;
-        $this->dataUscita = $_datauscita;
-        $this->genres = $_genres;
-    }
-
-    public function getTitolo(){
-        return $this->titolo;
-    }
-
-}
-
-$movie1 = new Movie("Guerre Stellari", 25-05-1977, [new Genre("Fantascienza"), new Genre("Azione")]);
-$movie2 = new Movie("Rogue One", 15-12-2016 , [new Genre("Fantascienza"), new Genre("Azione")]);
-
-var_dump($movie1);
-echo  "<br>-------------------<br>";
-var_dump($movie2);
+// var_dump($movie1);
+// echo  "<br>-------------------<br>";
+// var_dump($movie2);
 
 ?>
 
+</body>
+</html>
