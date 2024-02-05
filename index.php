@@ -12,11 +12,6 @@
 
 require_once("./db.php");
 
-
-// var_dump($movie1);
-// echo  "<br>-------------------<br>";
-// var_dump($movie2);
-
 ?>
 
 <h1>Lista Film: </h1>
