@@ -3,7 +3,7 @@
 class Movie{
     public $titolo;
     public $dataUscita;
-    public $genres = [];
+    public $genres;
 
     function __construct($_titolo, $_datauscita, $_genres){
         
@@ -19,7 +19,12 @@ class Movie{
     public function printMovie(){
         echo 'Titolo: ' . $this->titolo . '<br>';
         echo 'Data di uscita: ' . $this->dataUscita . '<br>';
-        echo 'Generi: ' . $this->genres . '<br>';
+
+        $infoGenres = "";
+            foreach ($this -> genres as $genre) {
+                $infoGenres .= " " . $genre -> genre;
+            }
+        echo 'Generi: ' . $infoGenres . '<br>';
     }
 }
 
