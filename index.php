@@ -8,19 +8,9 @@
 </head>
 <body>
 
-<h1>Lista Film: </h1>
-<ul>
-    <li <?php foreach($Movies as $film){
-        $film->printMovie();
-    } 
-    ?>>    
-    </li>
-</ul>
-
 <?php
-include("./Models/Genre.php");
-include("./Models/Movie.php");
-include("./db.php");
+
+require_once("./db.php");
 
 
 // var_dump($movie1);
@@ -28,6 +18,23 @@ include("./db.php");
 // var_dump($movie2);
 
 ?>
+
+<h1>Lista Film: </h1>
+
+<ul>
+    <?php
+        foreach($Movies as $film){
+    ?>
+    <li> 
+        <?php 
+       echo  $film -> printMovie();
+        ?>    
+    </li>
+    <?php
+    }
+    ?> 
+</ul>
+
 
 </body>
 </html>
